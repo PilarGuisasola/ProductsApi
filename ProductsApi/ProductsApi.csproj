@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\DTOs\Requests\" />
     <Folder Include="Repositories\Implementations\" />
     <Folder Include="Repositories\Interfaces\" />
     <Folder Include="Services\Implementations\" />

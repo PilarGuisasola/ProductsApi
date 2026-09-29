@@ -1,9 +1,8 @@
 ﻿
-namespace ProductsApi.Entities
+namespace ProductsApi.Models.DTOs.Requests
 {
-    public class Product
+    public class ProductForUpdateDto
     {
-        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public decimal Price { get; set; }
     }
