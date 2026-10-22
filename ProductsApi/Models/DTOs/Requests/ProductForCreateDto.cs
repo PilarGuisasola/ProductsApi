@@ -1,17 +1,17 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ProductsApi.Models.DTOs.Requests
 {
     public class ProductForCreateDto
     {
-        [Required(ErrorMessage = "El nombre es obligatorio")]
+        [Required(ErrorMessage = "El nombre es obligatorio.")]
         [StringLength(100, MinimumLength = 3,
-            ErrorMessage = "El nombre debe tener entre 3 y 100 caracteres")]
+            ErrorMessage = "El nombre debe tener entre 3 y 100 caracteres.")]
         public string Name { get; set; } = string.Empty;
 
-        [Range(0.01, double.MaxValue,
-            ErrorMessage = "El precio debe ser mayor que cero")]
+        [Range(typeof(decimal), "0", "79228162514264337593543950335",
+            MinimumIsExclusive = true,
+            ErrorMessage = "El precio debe ser mayor que cero.")]
         public decimal Price { get; set; }
     }
 }

@@ -10,3 +10,64 @@ Content-Type: application/json
   "name": "Mouse gamer",
   "price": 15000
 }
+
+
+###
+POST https://localhost:7253/api/products
+Content-Type: application/json
+
+{
+  "name": "",
+  "price": 100
+}
+
+
+###
+GET https://localhost:7253/api/products/search?name=TECLADO
+
+###
+GET https://localhost:7253/api/products/search?name=zzzzzz
+
+###
+GET https://localhost:7253/api/products/stats
+
+###
+GET https://localhost:7253/api/products
+
+###
+GET https://localhost:7253/api/products/3
+
+###
+GET https://localhost:7253/api/products/999
+
+###
+PUT https://localhost:7253/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Mouse inalámbrico",
+  "price": 4500
+}
+
+###
+PUT https://localhost:7253/api/products/999
+Content-Type: application/json
+
+{
+  "name": "Producto de prueba",
+  "price": 100
+}
+
+###
+DELETE https://localhost:7253/api/products/2
+
+
+###
+POST https://localhost:7253/api/products
+Content-Type: application/json
+
+{
+  "name": "Producto de prueba",
+  "price": 0
+}
+
